@@ -39,6 +39,9 @@ public class YogaActivity extends Activity {
 
         TextView tvBottom = findViewById(R.id.bottom);
         tvBottom.setText(stringFromJNI("bottom"));
+
+        TextView tvAbsolute = findViewById(R.id.absolute);
+        tvAbsolute.setText(stringFromJNI("absolute"));
     }
 
     /**

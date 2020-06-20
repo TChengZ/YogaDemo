@@ -8,7 +8,21 @@
     android:layout_height="match_parent"
     yoga:yg_flexDirection="column"
     yoga:yg_justifyContent="space_between"
+    yoga:yg_alignItems="center"
     >
+
+    <TextView
+        android:id="@+id/absolute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        yoga:yg_positionType="absolute"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:padding="5dp"
+        android:gravity="center"
+        yoga:yg_positionTop="10dp"
+        yoga:yg_positionLeft="10dp"
+        />
 
     <TextView
         android:id="@+id/top"
@@ -17,7 +31,7 @@
         android:background="@android:color/darker_gray"
         android:textColor="@android:color/white"
         android:padding="5dp"
-        yoga:yg_alignSelf="center"
+        yoga:yg_marginTop="60dp"
         />
     <com.facebook.yoga.android.YogaLayout
         android:layout_width="wrap_content"
@@ -66,7 +80,6 @@
         android:background="@android:color/darker_gray"
         android:textColor="@android:color/white"
         android:padding="5dp"
-        yoga:yg_alignSelf="center"
         />
 
 
