@@ -7,7 +7,10 @@ JNIEXPORT jstring
 JNICALL
 Java_com_yoga_jc_yogademo_YogaActivity_stringFromJNI(
         JNIEnv *env,
-        jobject /* this */) {
-    std::string hello = "Hello from C++";
-    return env->NewStringUTF(hello.c_str());
+        jobject /* this */, jstring s) {
+    std::string hello = "I am text ";
+    std::string str = env->GetStringUTFChars(s, JNI_FALSE);
+    std::string result = hello + str;
+    return env->NewStringUTF(result.c_str());
 }
+

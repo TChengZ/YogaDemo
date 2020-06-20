@@ -25,14 +25,25 @@ public class YogaActivity extends Activity {
         SoLoader.init(this, false);
         setContentView(R.layout.activity_yoga);
 
-        // Example of a call to a native method
-        final TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText(stringFromJNI());
+        TextView tvTop = (TextView) findViewById(R.id.top);
+        tvTop.setText(stringFromJNI("top"));
+
+        TextView tvMiddle = (TextView) findViewById(R.id.middle);
+        tvMiddle.setText(stringFromJNI("middle"));
+
+        TextView tvMiddleLeft = (TextView) findViewById(R.id.middle_left);
+        tvMiddleLeft.setText(stringFromJNI("left"));
+
+        TextView tvMiddleRight = (TextView) findViewById(R.id.middle_right);
+        tvMiddleRight.setText(stringFromJNI("right"));
+
+        TextView tvBottom = findViewById(R.id.bottom);
+        tvBottom.setText(stringFromJNI("bottom"));
     }
 
     /**
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
-    public native String stringFromJNI();
+    public native String stringFromJNI(String s);
 }

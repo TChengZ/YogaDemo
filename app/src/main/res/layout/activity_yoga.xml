@@ -1,19 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.facebook.yoga.android.YogaLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.facebook.yoga.android.YogaLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:yoga="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     yoga:yg_flexDirection="column"
+    yoga:yg_justifyContent="space_between"
     >
 
     <TextView
-        android:id="@+id/sample_text"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="Hello World!"
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:padding="5dp"
         yoga:yg_alignSelf="center"
         />
+    <com.facebook.yoga.android.YogaLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        yoga:yg_flexDirection="row"
+        yoga:yg_justifyContent="flex_start"
+        yoga:yg_alignItems="center"
+        yoga:yg_alignSelf="center"
+        >
+        <TextView
+            android:id="@+id/middle_left"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            android:padding="5dp"
+            yoga:yg_alignSelf="center"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/middle"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            android:padding="5dp"
+            yoga:yg_alignSelf="center"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/middle_right"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            android:padding="5dp"
+            yoga:yg_alignSelf="center"
+            android:gravity="center"
+            />
+    </com.facebook.yoga.android.YogaLayout>
+
+    <TextView
+        android:id="@+id/bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:padding="5dp"
+        yoga:yg_alignSelf="center"
+        />
+
 
 </com.facebook.yoga.android.YogaLayout>
